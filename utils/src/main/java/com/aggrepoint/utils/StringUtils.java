@@ -729,10 +729,10 @@ public class StringUtils {
 		StringBuffer sb = new StringBuffer();
 		boolean first = true;
 		for (String s : arr) {
-			if (trim)
-				s = s.trim();
 			if (excludeEmpty && isEmpty(s))
 				continue;
+			if (trim)
+				s = s.trim();
 			if (!first)
 				sb.append(join);
 			sb.append(capitalizedWord ? capitalizeWords(s) : s);
